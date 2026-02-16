@@ -2,25 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — KANPAIs</title>
-  <meta name="description" content="KANPAIs is a founder-led cross-border marketing partner helping brands enter Japan and grow overseas—CRM, automation, localisation, and content execution." />
+  <meta name="description" content="KANPAIs is a cross-border marketing partner helping brands enter Japan and grow overseas—CRM, automation, localisation, and content execution." />
   <meta name="theme-color" content="#0b1020" />
+
   <style>
     :root{
       --bg:#0b1020;
-      --bg2:#070b16;
       --card:rgba(255,255,255,.06);
-      --line:rgba(255,255,255,.12);
+      --line:rgba(255,255,255,.10);
       --text:#eef2ff;
-      --muted:rgba(238,242,255,.74);
-      --muted2:rgba(238,242,255,.56);
+      --muted:rgba(238,242,255,.72);
+      --muted2:rgba(238,242,255,.55);
       --accent:#7dd3fc;
       --accent2:#a78bfa;
       --shadow: 0 20px 60px rgba(0,0,0,.45);
-      --radius:22px;
-      --radius2:18px;
-      --max:1100px;
     }
     *{box-sizing:border-box}
     body{
@@ -28,93 +25,103 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
       color:var(--text);
       background:
-        radial-gradient(900px 520px at 12% 10%, rgba(167,139,250,.30), transparent 55%),
-        radial-gradient(900px 520px at 88% 18%, rgba(125,211,252,.26), transparent 55%),
-        radial-gradient(1100px 650px at 50% 110%, rgba(125,211,252,.12), transparent 60%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
+        radial-gradient(900px 500px at 15% 10%, rgba(167,139,250,.35), transparent 55%),
+        radial-gradient(900px 500px at 85% 20%, rgba(125,211,252,.30), transparent 55%),
+        radial-gradient(1100px 650px at 50% 105%, rgba(125,211,252,.14), transparent 60%),
+        var(--bg);
     }
     a{color:inherit}
-    .wrap{max-width:var(--max);margin:0 auto;padding:24px 18px 70px}
-    .topbar{
-      display:flex;align-items:center;justify-content:space-between;gap:12px;
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 56px}
+
+    /* Header */
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
       padding:14px 14px;
       border:1px solid var(--line);
-      border-radius:var(--radius2);
+      border-radius:18px;
       background:rgba(0,0,0,.18);
       backdrop-filter: blur(10px);
-      position:sticky;top:12px;z-index:10;
     }
-    .brand{display:flex;gap:12px;align-items:center;min-width:220px}
+    .brand{display:flex;gap:12px;align-items:center;text-decoration:none}
     .mark{
       width:40px;height:40px;border-radius:14px;
-      overflow:hidden;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
       display:grid;place-items:center;
-      border:1px solid rgba(255,255,255,.14);
-      background:linear-gradient(135deg, rgba(125,211,252,.12), rgba(167,139,250,.10));
+      color:#081024;font-weight:900;
+      box-shadow: 0 10px 30px rgba(125,211,252,.12);
+      flex:0 0 auto;
     }
-    .mark img{width:100%;height:100%;object-fit:cover;display:block}
-    .brandtxt{display:flex;flex-direction:column;line-height:1.1}
-    .brandtxt b{letter-spacing:.12em;font-size:12px;color:var(--muted2)}
-    .brandtxt span{font-size:14px;color:var(--muted)}
-    .navlinks{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .brandname{display:flex;flex-direction:column;line-height:1.1}
+    .brandname b{letter-spacing:.12em;font-size:12px;color:var(--muted2)}
+    .brandname span{font-size:14px;color:var(--muted)}
+    .navlinks{display:flex;gap:8px;align-items:center}
     .navlinks a{
       text-decoration:none;
       padding:10px 12px;border-radius:12px;
       border:1px solid transparent;
-      color:rgba(238,242,255,.82);
+      color:rgba(238,242,255,.80);
       font-weight:750;
     }
-    .navlinks a:hover{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#fff}
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:10px 14px;border-radius:14px;
-      text-decoration:none;font-weight:800;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:rgba(238,242,255,.90);
-    }
-    .btn.primary{
-      border-color:rgba(125,211,252,.35);
-      background:linear-gradient(135deg, rgba(125,211,252,.95), rgba(167,139,250,.90));
-      color:#07101f;
-      box-shadow: 0 16px 40px rgba(125,211,252,.10);
+    .navlinks a:hover{
+      border-color:var(--line);
+      background:rgba(255,255,255,.05);
+      color:#fff;
     }
 
-    .hero{
+    /* Shell card */
+    .shell{
       margin-top:18px;
       border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.035));
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
       box-shadow: var(--shadow);
       overflow:hidden;
     }
-    .hero-inner{padding:34px 22px 22px}
+    .inner{padding:30px 22px 22px}
+
+    /* Hero */
     .kicker{
       display:inline-flex;gap:10px;align-items:center;
       padding:8px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
       background:rgba(0,0,0,.18);
       color:var(--muted);
-      font-weight:750;font-size:13px;
+      font-weight:650;font-size:13px;
     }
     .dot{width:8px;height:8px;border-radius:99px;background:var(--accent)}
     h1{margin:14px 0 10px;font-size:40px;line-height:1.1;letter-spacing:-.02em}
-    .sub{max-width:860px;color:var(--muted);font-size:16px;line-height:1.8;margin:0 0 12px}
+    .sub{max-width:900px;color:var(--muted);font-size:16px;line-height:1.75;margin:0 0 14px}
 
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:11px 14px;border-radius:14px;
+      text-decoration:none;font-weight:800;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+    }
+    .btn.primary{
+      border-color:rgba(125,211,252,.35);
+      background:linear-gradient(135deg, rgba(125,211,252,.95), rgba(167,139,250,.90));
+      color:#07101f;
+    }
+    .ctaRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+
+    /* Sections */
     .grid{
       display:grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: 1fr 1fr;
       gap:12px;
       margin-top:16px;
     }
     .panel{
       border:1px solid var(--line);
-      border-radius:var(--radius2);
+      border-radius:18px;
       background:rgba(0,0,0,.14);
       padding:18px;
     }
     .panel h2{margin:0 0 8px;font-size:18px}
     .panel p{margin:0;color:var(--muted);line-height:1.75;font-size:14px}
+
     .list{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
     .list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:14px;line-height:1.6}
     .check{
@@ -126,82 +133,77 @@
     }
 
     .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
-    .card{border:1px solid var(--line);border-radius:var(--radius2);background:var(--card);padding:16px}
+    .card{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:16px}
     .card h3{margin:0 0 6px;font-size:15px}
     .card p{margin:0;color:var(--muted);line-height:1.6;font-size:13.5px}
 
-    .quote{
-      border:1px solid rgba(125,211,252,.22);
-      background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(167,139,250,.08));
-      border-radius:var(--radius2);
-      padding:16px 16px;
-      margin-top:12px;
-    }
-    .quote p{margin:0;color:rgba(238,242,255,.90);line-height:1.7;font-size:14px}
-    .quote small{display:block;margin-top:8px;color:var(--muted2);font-weight:700}
-
-    .media{display:grid;gap:12px;margin-top:12px}
+    /* Media */
     .img{
       border:1px solid var(--line);
-      border-radius:var(--radius2);
+      border-radius:18px;
       overflow:hidden;
       background:rgba(255,255,255,.03);
+      margin-top:12px;
     }
     .img img{width:100%;height:auto;display:block}
     .caption{padding:10px 12px;color:var(--muted2);font-size:12.5px;border-top:1px solid var(--line)}
 
+    /* Quote */
+    .quote{
+      margin-top:12px;
+      border:1px solid rgba(125,211,252,.22);
+      background:linear-gradient(180deg, rgba(125,211,252,.08), rgba(167,139,250,.06));
+      border-radius:18px;
+      padding:16px;
+    }
+    .quote p{margin:0;color:rgba(238,242,255,.92);font-size:14.5px;line-height:1.7}
+    .quote small{display:block;margin-top:8px;color:var(--muted2);font-weight:650}
+
+    /* Footer */
     footer{
       margin-top:18px;
       display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;
       color:var(--muted2);font-size:13px;
-      padding:14px 2px 0;
+      border-top:1px solid rgba(255,255,255,.10);
+      padding-top:14px;
     }
-    .footlinks a{color:rgba(238,242,255,.86);text-decoration:none}
-    .footlinks a:hover{color:#fff;text-decoration:underline}
+    .link{color:var(--text);opacity:.9;text-decoration:none}
     .divider{opacity:.35}
 
-    @media (max-width:900px){
+    @media (max-width:980px){
       .grid{grid-template-columns:1fr}
       .cards{grid-template-columns:1fr}
       h1{font-size:34px}
-      .navlinks{display:none}
-      .topbar{position:static}
     }
   </style>
 </head>
 
 <body>
   <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <div class="mark" aria-label="KANPAIs logo">
-          <img src="assets/kanpais-logo.png" alt="KANPAIs logo"
-               onerror="this.style.display='none'; this.parentElement.textContent='K'; this.parentElement.style.fontWeight='900'; this.parentElement.style.color='#081024'; this.parentElement.style.background='linear-gradient(135deg,var(--accent),var(--accent2))';">
-        </div>
-        <div class="brandtxt">
+    <header class="nav">
+      <a class="brand" href="index.html">
+        <div class="mark">K</div>
+        <div class="brandname">
           <b>KANPAIs</b>
           <span>Marketing that moves people & things</span>
         </div>
-      </div>
-
+      </a>
       <nav class="navlinks">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a class="btn" href="mailto:contact@kanpais.com">Contact</a>
       </nav>
     </header>
 
-    <main class="hero">
-      <div class="hero-inner">
+    <main class="shell">
+      <div class="inner">
         <div class="kicker"><span class="dot"></span> Japan ↔ Overseas • Bilingual delivery (EN/JP)</div>
         <h1>About KANPAIs</h1>
         <p class="sub">
-          KANPAIs is a founder-led cross-border marketing partner for Japanese brands entering overseas markets,
-          and global brands entering Japan. We help teams move fast—aligning strategy, CRM, automation, localisation,
-          and content execution into work that ships.
+          KANPAIs is a cross-border marketing partner for Japanese brands entering overseas markets, and global brands entering Japan.
+          We bring hands-on execution and cross-functional coordination—so marketing actually moves people and things.
         </p>
 
-        <div class="grid">
+        <section class="grid">
           <section class="panel">
             <h2>Why we exist</h2>
             <p>
@@ -213,26 +215,20 @@
               <li><span class="check">✓</span>Local nuance + global standards</li>
               <li><span class="check">✓</span>Automation and lifecycle thinking from day one</li>
             </ul>
-
-            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:12px">
-              <a class="btn primary" href="mailto:contact@kanpais.com?subject=KANPAIs%20Enquiry&body=Hi%20KANPAIs%2C%0A%0AWe%27re%20looking%20for%20help%20with%3A%0A-%20Market%3A%20Japan%20/%20Overseas%0A-%20Timeline%3A%20%0A-%20Goal%3A%20%0A%0AThanks%2C">Email contact@kanpais.com</a>
-              <a class="btn" href="#work">What we do</a>
-            </div>
           </section>
 
-          <aside class="panel">
-            <h2>Founder-led, team-ready</h2>
+          <section class="panel">
+            <h2>Team-ready delivery</h2>
             <p>
-              KANPAIs is founder-led and built to plug into startups, SMEs, or enterprise teams.
-              We bring hands-on execution and cross-functional coordination—so marketing actually moves people and things.
+              Built to plug into startups, SMEs, and enterprise teams—working with stakeholders across product, sales, ops, and creative.
             </p>
             <ul class="list">
               <li><span class="check">✓</span>Industries: Finance, Advertising, Manufacturing, iGaming</li>
               <li><span class="check">✓</span>Languages: English + Japanese</li>
               <li><span class="check">✓</span>Base: Australia + Japan</li>
             </ul>
-          </aside>
-        </div>
+          </section>
+        </section>
 
         <section class="panel" id="work" style="margin-top:12px">
           <h2>What we do</h2>
@@ -245,7 +241,7 @@
             </div>
             <div class="card">
               <h3>Smart Automation</h3>
-              <p>Trigger-based comms, operational workflows, and scalable campaign operations.</p>
+              <p>Trigger-based comms, scalable campaign operations, and workflow automation.</p>
             </div>
             <div class="card">
               <h3>Multilingual Localisation</h3>
@@ -253,7 +249,7 @@
             </div>
             <div class="card">
               <h3>Content Execution</h3>
-              <p>Ship-ready landing pages, email assets, and channel content with fast iteration.</p>
+              <p>Ship-ready landing pages, email assets, and channel content with rapid iteration.</p>
             </div>
           </div>
         </section>
@@ -261,16 +257,11 @@
         <section class="grid" style="margin-top:12px">
           <section class="panel">
             <h2>Recognition</h2>
-            <p>Impact matters. Here’s a real outcome from past CRM work—kept clean and professional.</p>
+            <p>Impact matters. A real outcome from past CRM work—kept clean and professional.</p>
+
             <div class="quote">
               <p>“Highest Impact CRM campaign” — recognised for exceptional results in marketing and CRM.</p>
               <small>Example outcome from past work</small>
-            </div>
-            <div class="media">
-              <div class="img">
-                <img src="assets/About3.png" alt="Recognition reference image" loading="lazy">
-                <div class="caption">Reference image (kept secondary to the quote)</div>
-              </div>
             </div>
           </section>
 
@@ -284,29 +275,16 @@
               <li><span class="check">✓</span>4) Learn → optimise → scale</li>
             </ul>
 
-            <div class="media" style="margin-top:12px">
-              <div class="img">
-                <img src="assets/about2.jpg" alt="Team and collaboration" loading="lazy">
-                <div class="caption">Cross-functional collaboration is part of the work</div>
-              </div>
+            <!-- Optional team photo (kept professional). If you don't want any images, delete this whole div. -->
+            <div class="img">
+              <img src="assets/about2.jpg" alt="Collaboration" loading="lazy">
+              <div class="caption">Cross-functional collaboration is part of the work</div>
             </div>
           </section>
         </section>
 
-        <footer>
-          <div>© <span id="y"></span> KANPAIs.</div>
-          <div class="footlinks">
-            <a href="index.html">Home</a>
-            <span class="divider"> · </span>
-            <a href="mailto:contact@kanpais.com">contact@kanpais.com</a>
-          </div>
-        </footer>
-      </div>
-    </main>
-  </div>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+        <section class="panel" style="margin-top:12px">
+          <h2>Contact</h2>
+          <p>Just email us with the market, timeline, and goal.</p>
+          <div class="ctaRow">
+            <a class="btn primary" href="mailto:contact@kanpais.com?subject=KANPAIs%20Enquiry&body=Hi%
