@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — KANPAIs</title>
-  <meta name="description" content="KANPAIs is a founder-led cross-border marketing partner helping brands enter Japan and grow overseas—CRM, automation, localisation, and content execution." />
+  <title>KANPAIs — Cross-Border Marketing</title>
+  <meta name="description" content="KANPAIs is a founder-led cross-border marketing partner. CRM & lifecycle strategy, smart automation, multilingual localisation, and content execution across Japan ↔ overseas." />
   <meta name="theme-color" content="#0b1020" />
   <style>
     :root{
       --bg:#0b1020;
       --bg2:#070b16;
       --card:rgba(255,255,255,.06);
+      --card2:rgba(0,0,0,.18);
       --line:rgba(255,255,255,.12);
       --text:#eef2ff;
       --muted:rgba(238,242,255,.74);
@@ -20,9 +21,11 @@
       --shadow: 0 20px 60px rgba(0,0,0,.45);
       --radius:22px;
       --radius2:18px;
+      --radius3:14px;
       --max:1100px;
     }
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -98,12 +101,15 @@
       font-weight:750;font-size:13px;
     }
     .dot{width:8px;height:8px;border-radius:99px;background:var(--accent)}
-    h1{margin:14px 0 10px;font-size:40px;line-height:1.1;letter-spacing:-.02em}
-    .sub{max-width:860px;color:var(--muted);font-size:16px;line-height:1.8;margin:0 0 12px}
+    h1{margin:14px 0 10px;font-size:44px;line-height:1.05;letter-spacing:-.02em}
+    .sub{max-width:860px;color:var(--muted);font-size:16px;line-height:1.8;margin:0 0 14px}
+
+    .hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:10px}
+    .mini{color:var(--muted2);font-size:13px}
 
     .grid{
       display:grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: 1.1fr .9fr;
       gap:12px;
       margin-top:16px;
     }
@@ -125,30 +131,29 @@
       color:var(--accent);font-weight:900;font-size:12px;
     }
 
+    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .pill{
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      color:rgba(238,242,255,.78);
+      font-size:13px;font-weight:700;
+    }
+
     .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
     .card{border:1px solid var(--line);border-radius:var(--radius2);background:var(--card);padding:16px}
     .card h3{margin:0 0 6px;font-size:15px}
     .card p{margin:0;color:var(--muted);line-height:1.6;font-size:13.5px}
 
     .quote{
+      margin-top:12px;
       border:1px solid rgba(125,211,252,.22);
       background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(167,139,250,.08));
       border-radius:var(--radius2);
       padding:16px 16px;
-      margin-top:12px;
     }
-    .quote p{margin:0;color:rgba(238,242,255,.90);line-height:1.7;font-size:14px}
+    .quote p{margin:0;color:rgba(238,242,255,.88);line-height:1.7;font-size:14px}
     .quote small{display:block;margin-top:8px;color:var(--muted2);font-weight:700}
-
-    .media{display:grid;gap:12px;margin-top:12px}
-    .img{
-      border:1px solid var(--line);
-      border-radius:var(--radius2);
-      overflow:hidden;
-      background:rgba(255,255,255,.03);
-    }
-    .img img{width:100%;height:auto;display:block}
-    .caption{padding:10px 12px;color:var(--muted2);font-size:12.5px;border-top:1px solid var(--line)}
 
     footer{
       margin-top:18px;
@@ -194,109 +199,72 @@
     <main class="hero">
       <div class="hero-inner">
         <div class="kicker"><span class="dot"></span> Japan ↔ Overseas • Bilingual delivery (EN/JP)</div>
-        <h1>About KANPAIs</h1>
+        <h1>Cross-border marketing, built for execution.</h1>
         <p class="sub">
           KANPAIs is a founder-led cross-border marketing partner for Japanese brands entering overseas markets,
-          and global brands entering Japan. We help teams move fast—aligning strategy, CRM, automation, localisation,
-          and content execution into work that ships.
+          and global brands entering Japan. We align strategy, CRM, automation, localisation, and content into work that ships.
         </p>
+
+        <div class="hero-cta">
+          <a class="btn primary" href="mailto:contact@kanpais.com?subject=KANPAIs%20Enquiry&body=Hi%20KANPAIs%2C%0A%0AWe%27re%20looking%20for%20help%20with%3A%0A-%20Market%3A%20Japan%20/%20Overseas%0A-%20Timeline%3A%20%0A-%20Goal%3A%20%0A%0AThanks%2C">Email contact@kanpais.com</a>
+          <a class="btn" href="about.html">About KANPAIs</a>
+          <span class="mini">Fast cadence • Clear deliverables • Local nuance + global standards</span>
+        </div>
 
         <div class="grid">
           <section class="panel">
-            <h2>Why we exist</h2>
-            <p>
-              Marketing gets complicated when culture, language, channels, and operations collide.
-              KANPAIs exists to make cross-border growth simpler: define the message, build the system, and execute with momentum.
-            </p>
-            <ul class="list">
-              <li><span class="check">✓</span>Clear plan, fast cadence, tangible deliverables</li>
-              <li><span class="check">✓</span>Local nuance + global standards</li>
-              <li><span class="check">✓</span>Automation and lifecycle thinking from day one</li>
-            </ul>
+            <h2>What we do</h2>
+            <p>Four pillars that cover strategy → execution → continuous improvement.</p>
 
-            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:12px">
-              <a class="btn primary" href="mailto:contact@kanpais.com?subject=KANPAIs%20Enquiry&body=Hi%20KANPAIs%2C%0A%0AWe%27re%20looking%20for%20help%20with%3A%0A-%20Market%3A%20Japan%20/%20Overseas%0A-%20Timeline%3A%20%0A-%20Goal%3A%20%0A%0AThanks%2C">Email contact@kanpais.com</a>
-              <a class="btn" href="#work">What we do</a>
+            <div class="cards" style="margin-top:12px">
+              <div class="card">
+                <h3>CRM / Lifecycle Strategy</h3>
+                <p>Segmentation, journeys, retention loops, and outcome-linked measurement.</p>
+              </div>
+              <div class="card">
+                <h3>Smart Automation</h3>
+                <p>Trigger-based comms, scalable campaign operations, and workflow design.</p>
+              </div>
+              <div class="card">
+                <h3>Multilingual Localisation</h3>
+                <p>EN/JP messaging, cultural QA, and in-market clarity across channels.</p>
+              </div>
+              <div class="card">
+                <h3>Content Execution</h3>
+                <p>Ship-ready pages and assets with fast iteration and clean standards.</p>
+              </div>
             </div>
           </section>
 
           <aside class="panel">
-            <h2>Founder-led, team-ready</h2>
-            <p>
-              KANPAIs is founder-led and built to plug into startups, SMEs, or enterprise teams.
-              We bring hands-on execution and cross-functional coordination—so marketing actually moves people and things.
-            </p>
+            <h2>Who we work with</h2>
+            <p>Startups, SMEs, and enterprise teams moving between Japan and overseas markets.</p>
             <ul class="list">
-              <li><span class="check">✓</span>Industries: Finance, Advertising, Manufacturing, iGaming</li>
-              <li><span class="check">✓</span>Languages: English + Japanese</li>
-              <li><span class="check">✓</span>Base: Australia + Japan</li>
+              <li><span class="check">✓</span>Japanese brands entering overseas</li>
+              <li><span class="check">✓</span>Global brands entering Japan</li>
+              <li><span class="check">✓</span>Teams needing CRM + localisation + execution</li>
             </ul>
+
+            <div class="pillrow">
+              <span class="pill">Finance</span>
+              <span class="pill">Advertising</span>
+              <span class="pill">Manufacturing</span>
+              <span class="pill">iGaming</span>
+              <span class="pill">Australia + Japan</span>
+              <span class="pill">English + Japanese</span>
+            </div>
+
+            <div class="quote">
+              <p>“When cross-border gets messy, we make it simple: define the message, build the system, and execute with momentum.”</p>
+              <small>— KANPAIs, founder-led delivery</small>
+            </div>
           </aside>
         </div>
-
-        <section class="panel" id="work" style="margin-top:12px">
-          <h2>What we do</h2>
-          <p>Four core pillars that cover strategy → execution → continuous improvement.</p>
-
-          <div class="cards">
-            <div class="card">
-              <h3>CRM / Lifecycle Strategy</h3>
-              <p>Segmentation, journeys, retention loops, and metrics tied to business outcomes.</p>
-            </div>
-            <div class="card">
-              <h3>Smart Automation</h3>
-              <p>Trigger-based comms, operational workflows, and scalable campaign operations.</p>
-            </div>
-            <div class="card">
-              <h3>Multilingual Localisation</h3>
-              <p>EN/JP messaging, cultural QA, and content that lands correctly in-market.</p>
-            </div>
-            <div class="card">
-              <h3>Content Execution</h3>
-              <p>Ship-ready landing pages, email assets, and channel content with fast iteration.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="grid" style="margin-top:12px">
-          <section class="panel">
-            <h2>Recognition</h2>
-            <p>Impact matters. Here’s a real outcome from past CRM work—kept clean and professional.</p>
-            <div class="quote">
-              <p>“Highest Impact CRM campaign” — recognised for exceptional results in marketing and CRM.</p>
-              <small>Example outcome from past work</small>
-            </div>
-            <div class="media">
-              <div class="img">
-                <img src="assets/About3.png" alt="Recognition reference image" loading="lazy">
-                <div class="caption">Reference image (kept secondary to the quote)</div>
-              </div>
-            </div>
-          </section>
-
-          <section class="panel">
-            <h2>How we work</h2>
-            <p>A simple, repeatable process—useful for startups moving fast and enterprise teams needing alignment.</p>
-            <ul class="list">
-              <li><span class="check">✓</span>1) Define the job-to-be-done and audience</li>
-              <li><span class="check">✓</span>2) Build the system (CRM, automation, localisation rules)</li>
-              <li><span class="check">✓</span>3) Ship content + campaigns</li>
-              <li><span class="check">✓</span>4) Learn → optimise → scale</li>
-            </ul>
-
-            <div class="media" style="margin-top:12px">
-              <div class="img">
-                <img src="assets/about2.jpg" alt="Team and collaboration" loading="lazy">
-                <div class="caption">Cross-functional collaboration is part of the work</div>
-              </div>
-            </div>
-          </section>
-        </section>
 
         <footer>
           <div>© <span id="y"></span> KANPAIs.</div>
           <div class="footlinks">
-            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
             <span class="divider"> · </span>
             <a href="mailto:contact@kanpais.com">contact@kanpais.com</a>
           </div>
