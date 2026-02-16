@@ -11,7 +11,6 @@
       --bg:#0b1020;
       --bg2:#070b16;
       --card:rgba(255,255,255,.06);
-      --card2:rgba(0,0,0,.18);
       --line:rgba(255,255,255,.12);
       --text:#eef2ff;
       --muted:rgba(238,242,255,.74);
@@ -21,7 +20,6 @@
       --shadow: 0 20px 60px rgba(0,0,0,.45);
       --radius:22px;
       --radius2:18px;
-      --radius3:14px;
       --max:1100px;
     }
     *{box-sizing:border-box}
@@ -132,18 +130,6 @@
     .card h3{margin:0 0 6px;font-size:15px}
     .card p{margin:0;color:var(--muted);line-height:1.6;font-size:13.5px}
 
-    .media{display:grid;gap:12px;margin-top:12px}
-    .img{
-      border:1px solid var(--line);
-      border-radius:var(--radius2);
-      overflow:hidden;
-      background:rgba(255,255,255,.03);
-    }
-    /* Fix “founder image not displaying well”: force a clean crop + consistent height */
-    .img img{width:100%;height:320px;object-fit:cover;display:block}
-    .caption{padding:10px 12px;color:var(--muted2);font-size:12.5px;border-top:1px solid var(--line)}
-
-    /* Replace “Recognition image is tacky” with a quote-style block */
     .quote{
       border:1px solid rgba(125,211,252,.22);
       background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(167,139,250,.08));
@@ -153,6 +139,16 @@
     }
     .quote p{margin:0;color:rgba(238,242,255,.90);line-height:1.7;font-size:14px}
     .quote small{display:block;margin-top:8px;color:var(--muted2);font-weight:700}
+
+    .media{display:grid;gap:12px;margin-top:12px}
+    .img{
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      overflow:hidden;
+      background:rgba(255,255,255,.03);
+    }
+    .img img{width:100%;height:auto;display:block}
+    .caption{padding:10px 12px;color:var(--muted2);font-size:12.5px;border-top:1px solid var(--line)}
 
     footer{
       margin-top:18px;
@@ -170,7 +166,6 @@
       h1{font-size:34px}
       .navlinks{display:none}
       .topbar{position:static}
-      .img img{height:260px}
     }
   </style>
 </head>
@@ -180,7 +175,8 @@
     <header class="topbar">
       <div class="brand">
         <div class="mark" aria-label="KANPAIs logo">
-          <img src="assets/kanpais-logo.png" alt="KANPAIs logo" onerror="this.style.display='none'; this.parentElement.textContent='K'; this.parentElement.style.fontWeight='900'; this.parentElement.style.color='#081024'; this.parentElement.style.background='linear-gradient(135deg,var(--accent),var(--accent2))';">
+          <img src="assets/kanpais-logo.png" alt="KANPAIs logo"
+               onerror="this.style.display='none'; this.parentElement.textContent='K'; this.parentElement.style.fontWeight='900'; this.parentElement.style.color='#081024'; this.parentElement.style.background='linear-gradient(135deg,var(--accent),var(--accent2))';">
         </div>
         <div class="brandtxt">
           <b>KANPAIs</b>
@@ -192,7 +188,6 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a class="btn" href="mailto:contact@kanpais.com">Contact</a>
-        <a class="btn primary" href="mailto:contact@kanpais.com?subject=KANPAIs%20Enquiry&body=Hi%20KANPAIs%2C%0A%0AWe%27re%20looking%20for%20help%20with%3A%0A-%20Market%3A%20Japan%20/%20Overseas%0A-%20Timeline%3A%20%0A-%20Goal%3A%20%0A%0AThanks%2C">Email</a>
       </nav>
     </header>
 
@@ -236,13 +231,6 @@
               <li><span class="check">✓</span>Languages: English + Japanese</li>
               <li><span class="check">✓</span>Base: Australia + Japan</li>
             </ul>
-
-            <div class="media">
-              <div class="img">
-                <img src="assets/about1.jpeg" alt="Founder photo" loading="lazy">
-                <div class="caption">Founder-led delivery • Australia / Japan</div>
-              </div>
-            </div>
           </aside>
         </div>
 
