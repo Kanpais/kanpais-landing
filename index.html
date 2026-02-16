@@ -7,6 +7,16 @@
   <meta name="description" content="KANPAIs is a founder-led cross-border marketing partner helping brands enter Japan and grow overseas—CRM, automation, localisation, and content execution." />
   <meta name="theme-color" content="#0b1020" />
   <style>
+
+    .brand a{display:flex;gap:12px;align-items:center;text-decoration:none}
+.logo-img{
+  height:34px;
+  width:auto;
+  display:block;
+}
+@media (max-width:900px){
+  .logo-img{height:30px}
+}
     :root{
       --bg:#0b1020;
       --bg2:#070b16;
@@ -172,24 +182,22 @@
 
 <body>
   <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <div class="mark" aria-label="KANPAIs logo">
-          <img src="assets/kanpais-logo.png" alt="KANPAIs logo"
-               onerror="this.style.display='none'; this.parentElement.textContent='K'; this.parentElement.style.fontWeight='900'; this.parentElement.style.color='#081024'; this.parentElement.style.background='linear-gradient(135deg,var(--accent),var(--accent2))';">
-        </div>
-        <div class="brandtxt">
-          <b>KANPAIs</b>
-          <span>Marketing that moves people & things</span>
-        </div>
+    <header class="nav">
+  <div class="brand">
+    <a href="/index.html" aria-label="KANPAIs Home">
+      <img class="logo-img" src="assets/kanpais-logo.png" alt="KANPAIs logo" />
+      <div class="brandname">
+        <b>KANPAIs</b>
+        <span>Marketing that moves people &amp; things</span>
       </div>
+    </a>
+  </div>
 
-      <nav class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="btn" href="mailto:contact@kanpais.com">Contact</a>
-      </nav>
-    </header>
+  <nav class="navlinks">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+  </nav>
+</header>
 
     <main class="hero">
       <div class="hero-inner">
